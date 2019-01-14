@@ -1,4 +1,5 @@
 import React from "react";
+import { Counter } from "./Counter";
 
 export const Card = props => {
   const {
@@ -13,14 +14,31 @@ export const Card = props => {
   } = props.students[props.counter];
   return (
     <div className="card">
-      <h1>{name}</h1>
-      <h2>is from: {from}</h2>
-      <h2>fun fact which is: {funFact}</h2>
-      <h2>prefers: {cityOrCountry}</h2>
-      <h2>likes to be: {indoorsOrOutdoors}</h2>
-      <h2>travels: {travel}</h2>
-      <h2>wants to eat: {food}</h2>
-      <h2>has a: {dogOrCat}</h2>
+      <div className="title">
+        <h1>{name}</h1>
+        <Counter counter={props.counter} length={props.length} />
+      </div>
+      <div className="content">
+        <h2>{`is from:  ${from}`}</h2>
+      </div>
+      <div className="content">
+        <h2>{`fun fact: ${funFact}`}</h2>
+      </div>
+      <div className="content">
+        <h2>{`prefers: ${cityOrCountry}`}</h2>
+      </div>
+      <div className="content">
+        <h2>{`likes to be: ${indoorsOrOutdoors}`}</h2>
+      </div>
+      <div className="content">
+        <h2>{`travels: ${travel}`}</h2>
+      </div>
+      <div className="content">
+        <h2>{`wants to eat: ${food}`}</h2>
+      </div>
+      <div className="content">
+        <h2>{`has a: ${dogOrCat}`}</h2>
+      </div>
     </div>
   );
 };

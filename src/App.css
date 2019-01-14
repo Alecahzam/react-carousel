@@ -56,3 +56,15 @@ button:hover {
   justify-content: space-between;
   padding: 2vh 2vw;
 }
+
+.title {
+  font-size: 3em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  font-size: 1em;
+}

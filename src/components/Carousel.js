@@ -27,7 +27,11 @@ class Carousel extends Component {
   render() {
     return (
       <main className="carousel">
-        <Card counter={this.state.counter} students={students} />
+        <Card
+          counter={this.state.counter}
+          length={this.state.length}
+          students={students}
+        />
         <BottomBar previous={this.previous} next={this.next} />
       </main>
     );
